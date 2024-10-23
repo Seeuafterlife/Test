@@ -1,54 +1,42 @@
-:root{
-  --primary-color: blue;
-  --secondary-color: rgb(84, 119, 189);
-}
-.slideshow {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
-  justify-items: center;
-  padding: 20px;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-.slideshow-image {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.controls {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  width: 100%;
-  max-width: 300px;
-}
-
-.controls button {
-  padding: 10px;
-  font-size: 16px;
-  background-color: var(--secondary-color);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.controls button:hover{
-  background-color: var(--primary-color);
-}
-.controls button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-@media (max-width: 600px) {
-  .controls {
-    grid-template-columns: 1fr; 
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-
-  .slideshow {
-    padding: 10px;
+  to {
+    transform: rotate(360deg);
   }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
 }

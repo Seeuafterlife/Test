@@ -1,0 +1,54 @@
+:root{
+  --primary-color: blue;
+  --secondary-color: rgb(84, 119, 189);
+}
+.slideshow {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.slideshow-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.controls button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.controls button:hover{
+  background-color: var(--primary-color);
+}
+.controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    grid-template-columns: 1fr; 
+  }
+
+  .slideshow {
+    padding: 10px;
+  }
+}
